@@ -9,3 +9,4 @@ poetry env info
 poetry install (cria o poetry.lock e dependências)
 poetry add 'fastapi[standard]'
 poetry run fastapi dev car_api/app.py
+poetry add "sqlalchemy[asyncio]

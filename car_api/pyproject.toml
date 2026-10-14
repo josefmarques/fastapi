@@ -5,12 +5,15 @@ description = ""
 authors = [
     {name = "Jose Marques",email = "josemarques.moc@gmail.com"}
 ]
-readme = "README.md"
+readme = "car_api/README.md"
 requires-python = ">=3.13,<4.0"
 dependencies = [
-    "fastapi[standard] (>=0.141.1,<0.142.0)",
+    "fastapi[standard] (>=0.143.0,<0.144.0)",
     "pydantic (>=2.13.5,<3.0.0)",
-    "sqlalchemy[asyncio] (>=2.1.4,<3.0.0)"
+    "sqlalchemy[asyncio] (>=2.1.4,<3.0.0)",
+    "aiosqlite (>=0.22.1,<0.23.0)",
+    "pydantic-settings (>=2.15.0,<3.0.0)",
+    "alembic (>=1.20.0,<2.0.0)"
 ]
 
 

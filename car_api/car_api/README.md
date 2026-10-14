@@ -20,3 +20,11 @@ poetry run alembic revision --autogenerate -m "create users table"
 
 # aplica as migrations no banco
 poetry run alembic upgrade head
+
+cd /home/zemarques/fastapi/car_api
+poetry run fastapi dev car_api/app.py
+# outra aba do terminal:
+curl -X POST http://127.0.0.1:8000/api/v1/users/ \
+  -H 'Content-Type: application/json' \
+  -d '{"username":"maria","email":"maria@example.com","password":"abc"}'
+sqlite3 car.db "SELECT * FROM users;"

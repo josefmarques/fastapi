@@ -13,3 +13,10 @@ poetry add "sqlalchemy[asyncio]
 poetry add aiosqlite
 poetry add pydantic-settings
 poetry add alembic
+source /home/zemarques/.cache/pypoetry/virtualenvs/car-api-EYUxc8Qa-py3.14/bin/activate
+poetry run alembic init migrations
+# gera as migrations
+poetry run alembic revision --autogenerate -m "create users table"
+
+# aplica as migrations no banco
+poetry run alembic upgrade head
